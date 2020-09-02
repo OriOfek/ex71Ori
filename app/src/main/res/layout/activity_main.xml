@@ -59,6 +59,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="+"
+                android:onClick="add"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 tools:text="+" />
@@ -74,6 +75,7 @@
                 android:layout_weight="1"
                 android:text="-"
                 android:textSize="36sp"
+                android:onClick="sub"
                 android:textStyle="bold"
                 tools:text="-" />
         </LinearLayout>
@@ -95,6 +97,7 @@
                 android:layout_weight="1"
                 android:text="*"
                 android:textSize="36sp"
+                android:onClick="multiplication"
                 android:textStyle="bold" />
 
             <Space
@@ -107,6 +110,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="/"
+                android:onClick="divide"
                 android:textSize="36sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -114,6 +118,38 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="AC"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="="
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0px"
             android:layout_weight="1" />
 
     </LinearLayout>
