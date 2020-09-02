@@ -1,6 +1,8 @@
 package com.example.lesson1oriofek;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     float summry;
     float lastSummery;
     boolean thereIsSummery;
+    Intent si;
     EditText display;
     int flag; // 1- add 2-sub 3- malitpation 4- divide
     String str;
@@ -125,5 +128,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return true;
+    }
+
+    public void credits(View view) {
+        Intent si = new Intent(this,credits.class);
+        si.putExtra("lastSummery",lastSummery);
+        si.putExtra("isSummery",thereIsSummery);
+        startActivity(si);
     }
 }
