@@ -8,6 +8,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     float summry;
+    float lastSummery;
+    boolean thereIsSummery;
     EditText display;
     int flag; // 1- add 2-sub 3- malitpation 4- divide
     String str;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         display = (EditText)findViewById(R.id.display);
         str = "";
         flag = 1;
+        thereIsSummery = false;
     }
 
     public void add(View view) {
@@ -83,9 +86,11 @@ public class MainActivity extends AppCompatActivity {
         {
             if(setSummry(Float.valueOf((display.getText().toString()).substring(str.length()))))
             {
+                lastSummery = summry;
                 display.setText(String.valueOf(summry));
                 display.setSelection(display.getText().length());
                 display.setHint("");
+                thereIsSummery = true;
             }
         }
         summry = 0;
