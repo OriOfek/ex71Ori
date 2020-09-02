@@ -36,7 +36,7 @@
             android:layout_weight="1" />
 
         <EditText
-            android:id="@+id/editTextNumberSigned"
+            android:id="@+id/display"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
@@ -131,6 +131,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="AC"
+                android:onClick="reset"
                 android:textSize="30sp" />
 
             <Space
@@ -143,6 +144,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="="
+                android:onClick="showSummery"
                 android:textSize="36sp"
                 android:textStyle="bold" />
         </LinearLayout>
