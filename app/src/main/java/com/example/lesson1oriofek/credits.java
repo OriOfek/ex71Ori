@@ -35,7 +35,6 @@ public class credits extends AppCompatActivity {
     }
 
     public void backToTheActivity(View view) {
-        Intent si = new Intent(this,MainActivity.class);
-        startActivity(si);
+        finish();
     }
 }

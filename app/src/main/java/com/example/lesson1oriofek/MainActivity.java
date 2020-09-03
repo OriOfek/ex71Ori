@@ -28,48 +28,44 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void add(View view) {
-        if (!display.getText().toString().equals(""))
+        if (!(display.getText().toString().equals("")))
         {
             setSummry(Float.valueOf((display.getText().toString()).substring(str.length())));
-            str = display.getText().toString();
-            str += '+';
-            display.setText(str);
+            str += display.getText().toString();
+            display.setText("");
             display.setSelection(display.getText().length());
             flag = 1;
         }
     }
 
     public void sub(View view) {
-        if (!display.getText().toString().equals(""))
+        if (!(display.getText().toString().equals("")))
         {
-            setSummry(Float.valueOf((display.getText().toString()).substring(str.length())));
-            str = display.getText().toString();
-            str += '-';
-            display.setText(str);
+            setSummry(Float.valueOf((display.getText().toString())));
+            str += display.getText().toString();
+            display.setText("");
             display.setSelection(display.getText().length());
             flag = 2;
         }
     }
 
     public void multiplication(View view) {
-        if (!display.getText().toString().equals(""))
+        if (!(display.getText().toString().equals("")))
         {
-            setSummry(Float.valueOf((display.getText().toString()).substring(str.length())));
-            str = display.getText().toString();
-            str += 'X';
-            display.setText(str);
+            setSummry(Float.valueOf((display.getText().toString())));
+            str += display.getText().toString();
+            display.setText("");
             display.setSelection(display.getText().length());
             flag = 3;
         }
     }
 
     public void divide(View view) {
-        if (!display.getText().toString().equals(""))
+        if (!(display.getText().toString().equals("")))
         {
-            setSummry(Float.valueOf((display.getText().toString()).substring(str.length())));
-            str = display.getText().toString();
-            str += ':';
-            display.setText(str);
+            setSummry(Float.valueOf((display.getText().toString())));
+            str += display.getText().toString();
+            display.setText("");
             display.setSelection(display.getText().length());
             flag = 4;
         }
@@ -85,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showSummery(View view) {
-        if (!display.getText().toString().equals(""))
+        if ((!display.getText().toString().equals("") || str.equals("")) && (str.charAt(str.length()-1) >= '0' && str.charAt(str.length()-1) <= '9'))
         {
-            if(setSummry(Float.valueOf((display.getText().toString()).substring(str.length()))))
+            if(setSummry(Float.valueOf((display.getText().toString()))))
             {
                 lastSummery = summry;
                 display.setText(String.valueOf(summry));
