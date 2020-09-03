@@ -99,10 +99,10 @@ public class MainActivity extends AppCompatActivity {
                 display.setHint("");
                 thereIsSummery = true;
             }
+            summry = 0;
+            str = "";
+            flag = 1;
         }
-        summry = 0;
-        str = "";
-        flag = 1;
     }
 
     public boolean setSummry(float num)
