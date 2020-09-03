@@ -11,7 +11,6 @@ public class credits extends AppCompatActivity {
     Intent gi;
     TextView tv;
     float last_summery;
-    Intent si;
     boolean there_is_summery;
     @Override
 
@@ -26,7 +25,14 @@ public class credits extends AppCompatActivity {
 
         if(there_is_summery)
         {
-            tv.setText("the last calculate = "+String.valueOf(last_summery));
+            if((((float)((int)last_summery)) == (float)last_summery))
+            {
+                tv.setText("the last calculate = "+String.valueOf((int)last_summery));
+            }
+            else
+            {
+                tv.setText("the last calculate = "+String.valueOf(last_summery));
+            }
         }
         else
         {

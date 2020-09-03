@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void add(View view) {
         if (!(display.getText().toString().equals("")))
         {
-            setSummry(Float.valueOf((display.getText().toString()).substring(str.length())));
+            setSummry(Float.valueOf((display.getText().toString())));
             str += display.getText().toString();
             display.setText("");
             display.setSelection(display.getText().length());
@@ -81,12 +81,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showSummery(View view) {
-        if ((!display.getText().toString().equals("") || str.equals("")) && (str.charAt(str.length()-1) >= '0' && str.charAt(str.length()-1) <= '9'))
+        if ((!display.getText().toString().equals("")))
         {
             if(setSummry(Float.valueOf((display.getText().toString()))))
             {
-                lastSummery = summry;
-                display.setText(String.valueOf(summry));
+                if((((float)((int)summry)) == (float)summry))
+                {
+                    lastSummery = (int)summry;
+                    display.setText(String.valueOf((int)summry));
+                }
+                else
+                {
+                    lastSummery = summry;
+                    display.setText(String.valueOf(summry));
+                }
                 display.setSelection(display.getText().length());
                 display.setHint("");
                 thereIsSummery = true;
