@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         thereIsSummery = false;
     }
 
-    public void add(View view) {
+    public void add(View view)
+    {
         if (!(display.getText().toString().equals("")))
         {
             setSummry(Float.valueOf((display.getText().toString())));
