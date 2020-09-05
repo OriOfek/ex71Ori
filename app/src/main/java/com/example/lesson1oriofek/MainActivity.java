@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             if(num == 0)
             {
                 display.setText("");
-                display.setHint("Albert do'nt fail me");
+                display.setHint("U can't divide in 0");
                 return false;
             }
             else {
