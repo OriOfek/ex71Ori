@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
     float lastSummery;
     boolean thereIsSummery;
     Intent si;
+    final int ADD = 1;
+    final int SUB = 1;
+    final int MUltiply = 1;
+    final int DIVIDE = 1;
     EditText display;
     int flag; // 1- add 2-sub 3- malitpation 4- divide
     String str;
@@ -23,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         display = (EditText)findViewById(R.id.display);
         str = "";
-        flag = 1;
+        flag = ADD;
         thereIsSummery = false;
     }
 
@@ -35,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             str += display.getText().toString();
             display.setText("");
             display.setSelection(display.getText().length());
-            flag = 1;
+            flag = ADD;
         }
     }
 
@@ -46,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             str += display.getText().toString();
             display.setText("");
             display.setSelection(display.getText().length());
-            flag = 2;
+            flag = SUB;
         }
     }
 
@@ -57,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             str += display.getText().toString();
             display.setText("");
             display.setSelection(display.getText().length());
-            flag = 3;
+            flag = MUltiply;
         }
     }
 
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             str += display.getText().toString();
             display.setText("");
             display.setSelection(display.getText().length());
-            flag = 4;
+            flag = DIVIDE;
         }
     }
 
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         summry = 0;
         display.setText(str);
         display.setSelection(display.getText().length());
-        flag = 1;
+        flag = ADD;
         display.setHint("");
     }
 
@@ -102,21 +106,21 @@ public class MainActivity extends AppCompatActivity {
             }
             summry = 0;
             str = "";
-            flag = 1;
+            flag = ADD;
         }
     }
 
     public boolean setSummry(float num)
     {
-        if (flag == 1)
+        if (flag == ADD)
         {
             summry +=num;
         }
-        else if (flag == 2)
+        else if (flag == SUB)
         {
             summry -= num;
         }
-        else if (flag == 3)
+        else if (flag == MUltiply)
         {
             summry *= num;
         }
