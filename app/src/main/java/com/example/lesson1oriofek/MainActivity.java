@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
     boolean thereIsSummery;
     Intent si;
     final int ADD = 1;
-    final int SUB = 1;
-    final int MUltiply = 1;
-    final int DIVIDE = 1;
+    final int SUB = 2;
+    final int MUltiply = 3;
+    final int DIVIDE = 4;
     EditText display;
     int flag; // 1- add 2-sub 3- malitpation 4- divide
     String str;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             setSummry(Float.valueOf((display.getText().toString())));
             str += display.getText().toString();
             display.setText("");
+            display.setHint("");
             display.setSelection(display.getText().length());
             flag = ADD;
         }
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             setSummry(Float.valueOf((display.getText().toString())));
             str += display.getText().toString();
             display.setText("");
+            display.setHint("");
             display.setSelection(display.getText().length());
             flag = SUB;
         }
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             setSummry(Float.valueOf((display.getText().toString())));
             str += display.getText().toString();
             display.setText("");
+            display.setHint("");
             display.setSelection(display.getText().length());
             flag = MUltiply;
         }
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             setSummry(Float.valueOf((display.getText().toString())));
             str += display.getText().toString();
             display.setText("");
+            display.setHint("");
             display.setSelection(display.getText().length());
             flag = DIVIDE;
         }
@@ -100,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
                     lastSummery = summry;
                     display.setText(String.valueOf(summry));
                 }
-                display.setSelection(display.getText().length());
                 display.setHint("");
                 thereIsSummery = true;
             }
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             if(num == 0)
             {
                 display.setText("");
-                display.setHint("U can't divide in 0");
+                display.setHint("Albert don't try to fail my app");
                 return false;
             }
             else {
