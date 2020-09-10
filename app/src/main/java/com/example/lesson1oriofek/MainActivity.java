@@ -96,15 +96,14 @@ public class MainActivity extends AppCompatActivity {
             {
                 if((((float)((int)summry)) == (float)summry))
                 {
-                    lastSummery = (int)summry;
                     display.setText(String.valueOf((int)summry));
                 }
                 else
                 {
-                    lastSummery = summry;
                     display.setText(String.valueOf(summry));
                 }
                 display.setHint("");
+                lastSummery = summry;
                 thereIsSummery = true;
             }
             summry = 0;
