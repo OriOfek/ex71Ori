@@ -27,11 +27,11 @@ public class credits extends AppCompatActivity {
         {
             if((((float)((int)last_summery)) == (float)last_summery))
             {
-                tv.setText("the last calculate = "+String.valueOf((int)last_summery));
+                tv.setText("the last calculate = "+(int)last_summery);
             }
             else
             {
-                tv.setText("the last calculate = "+String.valueOf(last_summery));
+                tv.setText("the last calculate = "+last_summery);
             }
         }
         else
